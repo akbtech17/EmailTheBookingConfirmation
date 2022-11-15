@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using Microsoft.Azure.KeyVault.Core;
 using Microsoft.Azure.WebJobs;
@@ -57,7 +57,7 @@ namespace EmailTheBookingConfirmation
                         $"<h4>Venue : Cinepolis: WESTEND Mall Aundh, Pune(AUDI 03) Pune, Pune</h4>" +
                         $"<hr/>" +
                         $"<h5>Transaction Time : {transactionTime}</h5>" +
-                        $"<h5>Total Cost : {totalCost}</h5>";
+                        $"<h5>Total Cost : ₹{totalCost}</h5>";
                       
                     sendGridMessage.AddContent("text/html", htmlContent);
                 }
@@ -85,15 +85,10 @@ namespace EmailTheBookingConfirmation
                         $"<h4>Venue : Cinepolis: WESTEND Mall Aundh, Pune(AUDI 03) Pune, Pune</h4>" +
                         $"<hr/>" +
                         $"<h5>Cancellation Time : {transactionTime}</h5>" +
-                        $"<h5>Refund Cost : {refundCost}</h5>";
+                        $"<h5>Refund Cost : ₹{refundCost}</h5>";
 
                     sendGridMessage.AddContent("text/html", htmlContent);
                 }
-
-                
-
- 
-
                 log.LogInformation($"C# Blob trigger function Processed blob\n Name:{name} \n Size: {myBlob.Length} Bytes");
             }
             catch (Exception ex)
