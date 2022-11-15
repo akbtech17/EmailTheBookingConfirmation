@@ -11,7 +11,18 @@ namespace EmailTheBookingConfirmation
         [FunctionName("EmailTheBookingStatus")]
         public void Run([BlobTrigger("licenses/{name}", Connection = "BlobConnectionString")]Stream myBlob, string name, ILogger log)
         {
-            log.LogInformation($"C# Blob trigger function Processed blob\n Name:{name} \n Size: {myBlob.Length} Bytes");
+            try
+            {
+                log.LogInformation($"C# Blob trigger function Processed blob\n Name:{name} \n Size: {myBlob.Length} Bytes");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            { 
+                myBlob.Close();
+            }
         }
     }
 }
