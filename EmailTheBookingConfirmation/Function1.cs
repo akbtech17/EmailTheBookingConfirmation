@@ -47,7 +47,7 @@ namespace EmailTheBookingConfirmation
 
                     string htmlContent = "" +
                         $"<h1>Thankyou {customerName}</h1>" +
-                        $"<h3>for booking ticket from book my movie</h3>" +
+                        $"<h3>for booking ticket from Book My Movie</h3>" +
                         $"<hr/>" +
                         $"<br>" +
                         $"<h2>Movie Name : {movieName}</h2>" +
@@ -75,7 +75,7 @@ namespace EmailTheBookingConfirmation
 
                     string htmlContent = "" +
                         $"<h1>Thankyou {customerName}</h1>" +
-                        $"<h3>for using book my movie</h3>" +
+                        $"<h3>for using Book My Movie</h3>" +
                         $"<hr/>" +
                         $"<br>" +
                         $"<h2>Movie Name : {movieName}</h2>" +
