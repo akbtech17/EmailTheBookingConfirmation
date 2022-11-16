@@ -76,7 +76,6 @@ namespace EmailTheBookingConfirmation
                     string htmlContent = "" +
                         $"<h1>Thankyou {customerName}</h1>" +
                         $"<h3>for using Book My Movie</h3>" +
-                        "<img src='https://storageaccount94111.blob.core.windows.net/bookmymovie/bookmymovie.png' alt='book my movie' border='0' />" +
                         $"<hr/>" +
                         $"<br>" +
                         $"<h2>Movie Name : {movieName}</h2>" +
