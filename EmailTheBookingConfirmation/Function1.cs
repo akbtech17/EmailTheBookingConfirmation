@@ -89,8 +89,8 @@ namespace EmailTheBookingConfirmation
 
                     sendGridMessage.AddContent("text/html", htmlContent);
                 }
-                var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(transactionDetails);
-                var base64 = Convert.ToBase64String(plainTextBytes);
+                byte[] plainTextBytes = System.Text.Encoding.UTF8.GetBytes(transactionDetails);
+                string base64 = Convert.ToBase64String(plainTextBytes);
 
                 sendGridMessage.AddAttachment(name, base64, "text/plain");
 
